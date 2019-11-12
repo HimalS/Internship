@@ -1,0 +1,26 @@
+<html ng-app="myApp" ng-controller="myCtrl">
+<head>
+  <style>
+    body {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-right: 200px;
+      margin-left: 400px;
+      background-color: rgb(169, 224, 169);
+    }
+  </style>
+</head>
+<body>
+    <form>
+       <header style = "font-size: 25px; color: blue;"> MANAGER LOGIN</header> <br>
+       USER NAME: <br>
+       <input type = "text" style="font-size: 15px; color: black;" ng-name="USER NAME" ><br><br>
+       PASSWORD: <br>
+       <input type = "password" style="font-size: 15px; color: black;" ng-name="PASSWORD" ><br><br>
+       <br><br>
+       <button ng-click="LOGIN(user)">LOGIN</button>     
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="Application.js"></script>
+</html>
