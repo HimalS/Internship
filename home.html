@@ -1,19 +1,20 @@
-<html ng-app="myApp" ng-controller="myCtrl">
+<html ng-app="myApp" ng-controller="applc">
 <head>
   <style>
-    body {
-      margin-top: 50px;
-      margin-bottom: 50px;
+   form {
+      margin: 2;
+      padding: 3em 150;
+      border: 2px solid black; 
+      margin-top: 20px;
+      margin-bottom: 40px;
       margin-right: 200px;
-      margin-left: 400px;
+      margin-left: 200px;
       background-color: rgb(169, 224, 169);
     }
   </style>
 </head>
-
 <body>
-  <p>{{info}}</p>
-  <form>
+  <form ng-submit="submit(user)">
     <header style="font-size: 25px;color:blue;">RESUME APPLICATION</header> <br>
 
     FIRST NAME:<br>
@@ -24,29 +25,17 @@
     EMAIL ADDRESS: <br>
     <input type="text" style="font-size: 15px; color: black;" name="EMAIL ADDRESS" ng-model="user.email"><br><br>
     POSITION: <br>
-    <div class="SELECT POSITION" style="width:250px">
-      <select ng-model="user.position">
-        <option value="0">SELECT POSITION:</option>
-        <option value="1">FINANCIAL ADVISOR</option>
-        <option value="2">FINANCIAL ANALYST</option>
-        <option value="3">DATABASE DEVELOPER</option>
-        <option value="4">ACCOUNTANT</option>
-        <option value="5">CUSTOMER SERVICE SPECIALIST</option>
-        <option value="6">IT SPECIALIST</option>
-        <option value="7">DEPARTMENT HEAD - PLANNING AND BUDGETING</option>
-        <option value="8">DATABASE MANAGER</option>
-        <option value="9">SOFTWARE DEVELOPER</option>
-        <option value="10">PUBLIC RELATION MANAGER</option>
+    <div class="SELECT POSITION"  style="width:250px">
+      <select ng-model="user.position" ng-options="position.jobTitle as position.jobTitle for position in positions">        
       </select>
     </div>
     <br> <br>
-    RESUME UPLOAD<br>
+        RESUME UPLOAD<br>
     <input type="file"><br><br>
     <br><br>
-    <button ng-click="submit(user)">SUBMIT</button>
+    <button type="submit">SUBMIT</button> 
   </form>
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="Application.js"></script>
 </html>

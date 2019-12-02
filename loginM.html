@@ -1,26 +1,49 @@
-<html ng-app="myApp" ng-controller="myCtrl">
-<head>
+<html ng-app="myApp" ng-controller="login">
+            
+ <head>
   <style>
-    body {
-      margin-top: 50px;
-      margin-bottom: 50px;
+    form {
+      margin: 3;
+      padding: 4em 150;
+      border: 2px solid black; 
+
+      margin-top: 70px;
+      margin-bottom: 70px;
       margin-right: 200px;
-      margin-left: 400px;
+      margin-left: 300px;
       background-color: rgb(169, 224, 169);
     }
   </style>
 </head>
 <body>
-    <form>
+    <form ng-submit="submit(user)">
        <header style = "font-size: 25px; color: blue;"> MANAGER LOGIN</header> <br>
        USER NAME: <br>
-       <input type = "text" style="font-size: 15px; color: black;" ng-name="USER NAME" ><br><br>
+       <input type = "text" style="font-size: 15px; color: black;" name="USER NAME" ng-model="user.user_name" ><br><br>
        PASSWORD: <br>
-       <input type = "password" style="font-size: 15px; color: black;" ng-name="PASSWORD" ><br><br>
+       <input type = "password" style="font-size: 15px; color: black;" name="PASSWORD" ng-model = "user.password" ><br><br>
        <br><br>
-       <button ng-click="LOGIN(user)">LOGIN</button>     
+       <button type ="login">LOGIN</button>     
     </form>
 </body>
+<style type="text/css">
+  .myGrid {
+  width: 500px;
+  height: 230px;
+  }
+  </style> 
+  <body ng-app="uigridApp">                        
+      <div ng-controller="uigridCtrl">
+      
+      <div ui-grid="gridOptions" class="myGrid"></div>
+      
+      </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="Application.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+     <script src="http://ui-grid.info/release/ui-grid.js"></script>        
+     <link rel="styleSheet" href="release/ui-grid.min.css"/>
+        <link rel ="styleSheet" href="css/main.css"/>
+        <script src="/release/ui-grid.min.js"></script>
+        <script src="/release/ui-grid.core.min.js"></script>
+
 </html>
