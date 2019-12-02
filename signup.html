@@ -1,0 +1,31 @@
+<html ng-app="myApp" ng-controller="signup">
+<head>
+  <style>  
+  form {
+                margin: 2;
+                padding: 4em 150;
+                border: 2px solid black;                                        
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-right: 200px;
+                margin-left: 300px;
+                background-color: rgb(197, 204, 197);
+        }
+   
+  </style>
+ 
+</head>
+<body>
+    <form ng-submit="submit(user)">     
+       <header style = "font-size: 25px; color: blue;"> MANAGER SIGNUP</header> <br>
+       USER NAME: <br>
+       <input type = "text" style="font-size: 15px; color: black;" name="USER NAME" ng-model="user.user_name" ><br><br>
+       PASSWORD: <br>
+       <input type = "password" style="font-size: 15px; color: black;" name="PASSWORD" ng-model = "user.password" ><br><br>
+       <br><br>
+       <button type ="signup">SIGNUP</button>     
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="Application.js"></script>
+</html>
