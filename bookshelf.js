@@ -6,8 +6,7 @@ const knex = require('knex')({
         password: 'Sanjeev@123',
         database: 'resume',
         charset: 'utf8'
-    },
-    debug: true
+    }
 });
 const bookshelf = require('bookshelf')(knex)
 
